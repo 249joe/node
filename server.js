@@ -14,6 +14,6 @@ app.get('*',async(req,res)=>{
     res.sendFile(path.join(__dirname,req.url));
 })
 
-app.listen(3500,()=>{
+app.listen(process.env.PORT || 3500,()=>{
     console.log("server runing");
 })
